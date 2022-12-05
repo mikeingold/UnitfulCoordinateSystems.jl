@@ -58,6 +58,9 @@ module UnitfulCoordinateSystems
     Base.:+(u::Coordinate, v::Coordinate) = CoordinateCartesian(u) + CoordinateCartesian(v)
     Base.:-(u::CoordinateCartesian, v::CoordinateCartesian) = CoordinateCartesian(u.x-v.x, u.y-v.y, u.z-v.z)
     Base.:-(u::Coordinate, v::Coordinate) = CoordinateCartesian(u) - CoordinateCartesian(v)
+    Base.:*(a::Any, r::CoordinateCartesian) = CoordinateCartesian(a * r.x, a * r.y, a * r.z)
+    Base.:*(a::Any, r::Coordinate = a * CoordinateCartesian(r)
+    Base.:*(r::Coordinate, a::Any) = a * r
 
     function LinearAlgebra.cross(u::CoordinateCartesian, v::CoordinateCartesian)
         w = cross(SVector(u.x, u.y, u.z), SVector(v.x, v.y, v.z))
