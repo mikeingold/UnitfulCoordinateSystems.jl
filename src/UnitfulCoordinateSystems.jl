@@ -88,6 +88,8 @@ module UnitfulCoordinateSystems
     LinearAlgebra.norm(r̄::CoordinateCylindrical) = LinearAlgebra.norm(SVector(r̄.ρ,r̄.z))
     LinearAlgebra.norm(r̄::CoordinateSpherical) = r̄.r
 
+    StaticArrays.SVector(r::CoordinateCartesian) = SVector(r.x, r.y, r.z)
+
     ###########################################################################
     #                        INDEX FUNCTIONS
     ###########################################################################
