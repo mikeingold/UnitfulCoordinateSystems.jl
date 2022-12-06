@@ -79,7 +79,6 @@ module UnitfulCoordinateSystems
     # Base.:*(a::Any, r::CoordinateCartesian) = CoordinateCartesian(a * r.x, a * r.y, a * r.z)
     # Base.:*(a::Any, r::Coordinate{3}) = a * CoordinateCartesian(r)
     # Base.:*(r::Coordinate, a::Any) = a * r
-
     # Base.:/(a::Any, r::CoordinateCartesian) = CoordinateCartesian(a * r.x, a * r.y, a * r.z)
     # Base.:*(a::Any, r::Coordinate{3}) = a * CoordinateCartesian(r)
     # Base.:*(r::Coordinate, a::Any) = a * r
@@ -94,6 +93,24 @@ module UnitfulCoordinateSystems
     LinearAlgebra.norm(r̄::CoordinateCartesian) = LinearAlgebra.norm(SVector(r̄.x,r̄.y,r̄.z))
     LinearAlgebra.norm(r̄::CoordinateCylindrical) = LinearAlgebra.norm(SVector(r̄.ρ,r̄.z))
     LinearAlgebra.norm(r̄::CoordinateSpherical) = r̄.r
+
+    ###########################################################################
+    #                        INDEX FUNCTIONS
+    ###########################################################################
+
+    x(r::CoordinateRectangular) = r.x
+    x(r::Coordinate{2}) = CoordinateRectangular(r).x
+    x(r::CoordinateCartesian) = r.x
+    x(r::Coordinate{3}) = CoordinateCartesian(r).x
+
+    y(r::CoordinateRectangular) = r.y
+    y(r::Coordinate{2}) = CoordinateRectangular(r).y
+    y(r::CoordinateCartesian) = r.y
+    y(r::Coordinate{3}) = CoordinateCartesian(r).y
+
+    z(r::Coordinate{2}) = 0.0
+    z(r::CoordinateCartesian) = r.z
+    z(r::Coordinate{3}) = CoordinateCartesian(r).z
 
     r(r̄::Coordinate) = LinearAlgebra.norm(r̄)
 
