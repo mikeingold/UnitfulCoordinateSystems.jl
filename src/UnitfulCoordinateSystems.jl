@@ -108,6 +108,12 @@ module UnitfulCoordinateSystems
     z(r::CoordinateCartesian) = r.z
     z(r::Coordinate{3}) = CoordinateCartesian(r).z
 
+    ρ(r::CoordinateRectangular) = hypot(r.x, r.y)
+    ρ(r::CoordinatePolar) = r.r
+    ρ(r::CoordinateCartesian) = hypot(r.x, r.y)
+    ρ(r::CoordinateCylindrical) = r.ρ
+    ρ(r::CoordinateSpherical) = ρ(CoordinateCartesian(r))
+
     r(r̄::Coordinate) = LinearAlgebra.norm(r̄)
 
     ϕ(r̄::CoordinateRectangular) = tand(r̄.y/r̄.x) * u"°"
