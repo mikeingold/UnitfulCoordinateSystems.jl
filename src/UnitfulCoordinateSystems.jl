@@ -54,13 +54,35 @@ module UnitfulCoordinateSystems
     #                        UTILITY FUNCTIONS
     ###########################################################################
 
+    Base.isempty(r::Coordinate) = false
+    Base.length(r::Coordinate{N}) = N
+    Base.axes(r::Coordinate{N}) = Base.OneTo(N)
+
+    function Base.getindex(r::CoordinateCartesian, i::Int)
+        if i == 1
+            return r.x
+	elseif i == 2
+	    return r.y
+	elseif i == 3
+            return r.z
+	else
+		error("r[$i] undefined for a CoordinateCartesian")
+	end
+    end
+
     Base.:+(u::CoordinateCartesian, v::CoordinateCartesian) = CoordinateCartesian(u.x+v.x, u.y+v.y, u.z+v.z)
     Base.:+(u::Coordinate, v::Coordinate) = CoordinateCartesian(u) + CoordinateCartesian(v)
+
     Base.:-(u::CoordinateCartesian, v::CoordinateCartesian) = CoordinateCartesian(u.x-v.x, u.y-v.y, u.z-v.z)
     Base.:-(u::Coordinate, v::Coordinate) = CoordinateCartesian(u) - CoordinateCartesian(v)
-    Base.:*(a::Any, r::CoordinateCartesian) = CoordinateCartesian(a * r.x, a * r.y, a * r.z)
-    Base.:*(a::Any, r::Coordinate = a * CoordinateCartesian(r)
-    Base.:*(r::Coordinate, a::Any) = a * r
+
+    # Base.:*(a::Any, r::CoordinateCartesian) = CoordinateCartesian(a * r.x, a * r.y, a * r.z)
+    # Base.:*(a::Any, r::Coordinate{3}) = a * CoordinateCartesian(r)
+    # Base.:*(r::Coordinate, a::Any) = a * r
+
+    # Base.:/(a::Any, r::CoordinateCartesian) = CoordinateCartesian(a * r.x, a * r.y, a * r.z)
+    # Base.:*(a::Any, r::Coordinate{3}) = a * CoordinateCartesian(r)
+    # Base.:*(r::Coordinate, a::Any) = a * r
 
     function LinearAlgebra.cross(u::CoordinateCartesian, v::CoordinateCartesian)
         w = cross(SVector(u.x, u.y, u.z), SVector(v.x, v.y, v.z))
