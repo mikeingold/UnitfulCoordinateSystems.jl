@@ -55,8 +55,8 @@ module UnitfulCoordinateSystems
     ###########################################################################
 
     Base.isempty(r::Coordinate) = false
-    Base.length(r::Coordinate{N}) = N
-    Base.axes(r::Coordinate{N}) = Base.OneTo(N)
+    Base.length(r::Coordinate{N}) where {N} = N
+    Base.axes(r::Coordinate{N}) where {N} = Base.OneTo(N)
 
     function Base.getindex(r::CoordinateCartesian, i::Int)
         if i == 1
