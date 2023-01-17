@@ -1,9 +1,10 @@
 name = "UnitfulCoordinateSystems"
 uuid = "09812cc9-162f-4ef5-b000-81142b1d39ff"
 authors = ["Mike Ingold <mike.ingold@gmail.com>"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
+DimensionfulAngles = "2d4b8d7a-02d9-40f9-9abe-9c695b77de0d"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
