@@ -55,7 +55,7 @@ module UnitfulCoordinateSystems
     # θ is the angle between a vector and the positive z-axis
     θ(r̄::CoordinatePolar{L,A}) where {L,A} = 90 * one(A) * unit(r̄.φ)
     θ(r̄::CoordinateRectangular{L}) where {L} = one(L) * 90u"°"
-    θ(r̄::CoordinateCartesian) = asind(r̄.ρ/r(r̄)) * u"°"
+    θ(r̄::CoordinateCartesian) = acosd(r̄.z/r(r̄)) * u"°"
     θ(r̄::CoordinateCylindrical) = atand(r̄.ρ/r̄.z) * u"°"
     θ(r̄::CoordinateSpherical) = r̄.θ
     theta = θ
