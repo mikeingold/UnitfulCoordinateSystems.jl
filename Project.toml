@@ -1,7 +1,7 @@
 name = "UnitfulCoordinateSystems"
 uuid = "09812cc9-162f-4ef5-b000-81142b1d39ff"
 authors = ["Mike Ingold <mike.ingold@gmail.com>"]
-version = "0.2.0"
+version = "0.2.1"
 
 [deps]
 DimensionfulAngles = "2d4b8d7a-02d9-40f9-9abe-9c695b77de0d"
