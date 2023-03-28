@@ -6,8 +6,7 @@
 systems with `Unitful` dimensions. These systems include, as defined by the standards
 in ISO 80000-2:2019:
 - Rectangular (x, y)
-- Polar (x, y)
+- Polar (r, $\varphi$)
 - Cartesian (x, y, z)
-- Cylindrical (r, $\varphi$, z)
+- Cylindrical ($\rho$, $\varphi$, z)
 - Spherical (r, $\theta$, $\varphi$)
-
