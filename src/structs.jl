@@ -39,7 +39,3 @@ abstract type AbstractCoordinate{N} end
         theta::A
         phi::A
     end
-
-export AbstractCoordinate
-export CoordinateRectangular, CoordinatePolar
-export CoordinateCartesian, CoordinateCylindrical, CoordinateSpherical
