@@ -3,7 +3,9 @@
 ## Component Functions
 
 These functions are not exported by default because they present a high probability
-of namespace collisions.
+of namespace collisions. Instead, they can be accessed by prepending the package
+name, i.e. `UnitfulCoordinateSystems.x`, or by importing them explicitly, e.g.
+`using UnitfulCoordinateSystems: x, y, z`.
 
 ```@docs
 UnitfulCoordinateSystems.x

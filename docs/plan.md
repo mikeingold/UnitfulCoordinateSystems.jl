@@ -1,10 +1,17 @@
 # TODO
 
 Register package in Julia registry:
-- Check rules: name similarity, requirements for automatic acceptance?
-- Update Documenter docs with an API page and coordinate system images/definitions
-- Implement functions `x`, `y`, and `z` for `CoordinateSpherical`
+- Any name similarity issue?
+- Requirements for automatic acceptance?
 
-Other:
-- Finish writing tests and deploy a GitHub Action to run them
-- Maybe implement getproperty methods for non-Unicode accessors
+Documentation:
+- Add API references for:
+    - Constructors (from components, from `SVector`, from other `AbstractCoordinate`)
+    - Unit vectors
+
+Tests:
+- Finish writing tests
+    - For `CoordinateCylindrical` and `CoordinateSpherical`
+    - For `SVector` conversions
+    - Equality `==` between different coordinate types?
+- Deploy a GitHub Action for `runtests.jl`
