@@ -9,5 +9,5 @@ in ISO 80000-2:2019:
 - Polar (x, y)
 - Cartesian (x, y, z)
 - Cylindrical (r, $\varphi$, z)
-- Spherical (r, $\varphi$, $\theta$)
+- Spherical (r, $\theta$, $\varphi$)
 
