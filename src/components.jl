@@ -75,7 +75,8 @@ r(r̄::CoordinateSpherical) = r̄.r
 Calculate the angle between the positive x-axis and the coordinate that `r̄`
 subtends onto the xy-plane.
 
-Note: `phi`, `φ`, and `ϕ` are all aliased to the same function.
+!!! note
+    `phi`, `φ`, and `ϕ` are all aliased to the same function.
 """
 phi(r̄::CoordinatePolar) = r̄.phi
 phi(r̄::CoordinateRectangular) = atand(r̄.y/r̄.x) * u"°"
@@ -89,7 +90,8 @@ phi(r̄::CoordinateSpherical) = r̄.phi
 Calculate the angle between the positive x-axis and the coordinate that `r̄`
 subtends onto the xy-plane.
 
-Note: `phi`, `φ`, and `ϕ` are all aliased to the same function.
+!!! note
+    `phi`, `φ`, and `ϕ` are all aliased to the same function.
 """
 φ = phi
 
@@ -99,7 +101,8 @@ Note: `phi`, `φ`, and `ϕ` are all aliased to the same function.
 Calculate the angle between the positive x-axis and the coordinate that `r̄`
 subtends onto the xy-plane.
 
-Note: `phi`, `φ`, and `ϕ` are all aliased to the same function.
+!!! note
+    `phi`, `φ`, and `ϕ` are all aliased to the same function.
 """
 ϕ = phi
 
@@ -108,7 +111,8 @@ Note: `phi`, `φ`, and `ϕ` are all aliased to the same function.
 
 Calculate the angle between the positive z-axis and `r̄`.
 
-Note: `theta`, `θ`, and `ϑ` are all aliased to the same function.
+!!! note
+    `theta`, `θ`, and `ϑ` are all aliased to the same function.
 """
 theta(r̄::CoordinatePolar{L,A}) where {L,A} = 90 * one(A) * unit(r̄.phi)
 theta(r̄::CoordinateRectangular{L}) where {L} = one(L) * 90u"°"
@@ -121,7 +125,8 @@ theta(r̄::CoordinateSpherical) = r̄.theta
 
 Calculate the angle between the positive z-axis and `r̄`.
 
-Note: `theta`, `θ`, and `ϑ` are all aliased to the same function.
+!!! note
+    `theta`, `θ`, and `ϑ` are all aliased to the same function.
 """
 θ = theta
 
@@ -130,6 +135,7 @@ Note: `theta`, `θ`, and `ϑ` are all aliased to the same function.
 
 Calculate the angle between the positive z-axis and `r̄`.
 
-Note: `theta`, `θ`, and `ϑ` are all aliased to the same function.
+!!! note
+    `theta`, `θ`, and `ϑ` are all aliased to the same function.
 """
 ϑ = theta
