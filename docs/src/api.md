@@ -1,5 +1,15 @@
 # Reference
 
+## Data Structures
+
+```@docs
+UnitfulCoordinateSystems.CoordinateRectangular
+UnitfulCoordinateSystems.CoordinatePolar
+UnitfulCoordinateSystems.CoordinateCartesian
+UnitfulCoordinateSystems.CoordinateCylindrical
+UnitfulCoordinateSystems.CoordinateSpherical
+```
+
 ## Component Functions
 
 These functions are not exported by default because they present a high probability
