@@ -3,6 +3,7 @@
 ## Data Structures
 
 ```@docs
+UnitfulCoordinateSystems.AbstractCoordinate
 UnitfulCoordinateSystems.CoordinateRectangular
 UnitfulCoordinateSystems.CoordinatePolar
 UnitfulCoordinateSystems.CoordinateCartesian

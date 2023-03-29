@@ -3,7 +3,7 @@
 ################################################################################
 
 """
-AbstractCoordinate{N}
+    AbstractCoordinate{N}
 
 Used to represent a Unitful `N`-dimensional coordinate.
 """
@@ -14,7 +14,7 @@ abstract type AbstractCoordinate{N} end
     ############################################################################
 
     """
-    CoordinatePolar{L,A} <: AbstractCoordinate{2} where {L<:Unitful.Length, A<:DimensionfulAngles.Angle}
+        CoordinatePolar{L,A} <: AbstractCoordinate{2} where {L<:Unitful.Length, A<:DimensionfulAngles.Angle}
 
     Used to represent a two-dimensional polar coordinate located on the xy-plane
     and defined by: a radius `r`, and an azimuth angle `phi` measured relative
@@ -26,7 +26,7 @@ abstract type AbstractCoordinate{N} end
     end
 
     """
-    CoordinateRectangular{L} <: AbstractCoordinate{2} where {L<:Unitful.Length}
+        CoordinateRectangular{L} <: AbstractCoordinate{2} where {L<:Unitful.Length}
 
     Used to represent a two-dimensional rectangular coordinate located on the
     xy-plane and defined by orthogonal `x` and `y` components.
@@ -41,7 +41,7 @@ abstract type AbstractCoordinate{N} end
     ############################################################################
 
     """
-    CoordinateCartesian{L} <: AbstractCoordinate{3} where {L<:Unitful.Length}
+        CoordinateCartesian{L} <: AbstractCoordinate{3} where {L<:Unitful.Length}
 
     Used to represent a three-dimensional Cartesian coordinate, defined by
     orthogonal `x`, `y`, and `z` components.
@@ -53,7 +53,7 @@ abstract type AbstractCoordinate{N} end
     end
 
     """
-    CoordinateCylindrical{L,A} <: AbstractCoordinate{3} where {L<:Unitful.Length, A<:DimensionfulAngles.Angle}
+        CoordinateCylindrical{L,A} <: AbstractCoordinate{3} where {L<:Unitful.Length, A<:DimensionfulAngles.Angle}
 
     Used to represent a three-dimensional cylindrical coordinate, defined by: a
     range `rho` from the origin to the point on the xy-plane subtended by the
@@ -67,7 +67,7 @@ abstract type AbstractCoordinate{N} end
     end
 
     """
-    CoordinateSpherical{L,A} <: AbstractCoordinate{3} where {L<:Unitful.Length, A<:DimensionfulAngles.Angle}
+        CoordinateSpherical{L,A} <: AbstractCoordinate{3} where {L<:Unitful.Length, A<:DimensionfulAngles.Angle}
 
     Used to represent a three-dimensional spherical coordinate, defined by: a
     radius `r` from the origin to the coordinate, a polar angle `theta` measured
