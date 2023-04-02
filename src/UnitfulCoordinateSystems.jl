@@ -52,7 +52,7 @@ module UnitfulCoordinateSystems
     ###########################################################################
 
     function Base.getproperty(coord::CoordinatePolar, sym::Symbol)
-        if (sym == :rho) || (sym == :phi)
+        if (sym == :r) || (sym == :phi)
             return getfield(coord, sym)
         elseif sym == :x
             return x(coord)
@@ -60,9 +60,7 @@ module UnitfulCoordinateSystems
             return y(coord)
         elseif sym == :z
             return z(coord)
-        elseif sym == :r
-            return r(coord)
-        elseif sym == :ρ
+        elseif (sym || :rho) || (sym == :ρ)
             return rho(coord)
         elseif (sym == :φ) || (sym == :ϕ)
             return phi(coord)

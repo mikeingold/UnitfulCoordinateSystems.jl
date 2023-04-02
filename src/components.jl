@@ -11,7 +11,7 @@
 
 Calculate the x̂-directed component of `r̄`, i.e. the inner product of x̂ and r̄.
 """
-x(r̄::CoordinatePolar) = r̄.r * cos(r̄.φ)
+x(r̄::CoordinatePolar) = r̄.r * cos(r̄.phi)
 x(r̄::CoordinateRectangular) = r̄.x
 x(r̄::CoordinateCartesian) = r̄.x
 x(r̄::CoordinateCylindrical) = r̄.r * cos(r̄.phi)
@@ -22,7 +22,7 @@ x(r̄::CoordinateSpherical) = r̄.r * sin(r̄.theta) * cos(r̄.phi)
 
 Calculate the ŷ-directed component of `r̄`, i.e. the inner product of ŷ and r̄.
 """
-y(r̄::CoordinatePolar) = r̄.r * sin(r̄.φ)
+y(r̄::CoordinatePolar) = r̄.r * sin(r̄.phi)
 y(r̄::CoordinateRectangular) = r̄.y
 y(r̄::CoordinateCartesian) = r̄.y
 y(r̄::CoordinateCylindrical) = r̄.r * sin(r̄.phi)
