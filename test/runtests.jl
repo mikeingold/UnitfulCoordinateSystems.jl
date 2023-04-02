@@ -56,9 +56,9 @@ end
 	@test UnitfulCoordinateSystems.φ(coord)   ≈ atand(2.0) * u"°"
 	@test UnitfulCoordinateSystems.ϕ(coord)   ≈ atand(2.0) * u"°"
 	
-	@test UnitfulCoordinateSystems.theta(coord) ≈ acosd(3.0/sqrt(14.0)) * u"°"
-	@test UnitfulCoordinateSystems.θ(coord)     ≈ acosd(3.0/sqrt(14.0)) * u"°"
-	@test UnitfulCoordinateSystems.ϑ(coord)     ≈ acosd(3.0/sqrt(14.0)) * u"°"
+	@test UnitfulCoordinateSystems.theta(coord) ≈ acosd(3.0 / sqrt(14.0)) * u"°"
+	@test UnitfulCoordinateSystems.θ(coord)     ≈ acosd(3.0 / sqrt(14.0)) * u"°"
+	@test UnitfulCoordinateSystems.ϑ(coord)     ≈ acosd(3.0 / sqrt(14.0)) * u"°"
 end
 
 @testset "Component Functions on CoordinateCylindrical" begin
@@ -76,9 +76,9 @@ end
 	@test UnitfulCoordinateSystems.φ(coord)   ≈ 45.0u"°"
 	@test UnitfulCoordinateSystems.ϕ(coord)   ≈ 45.0u"°"
 	
-	@test UnitfulCoordinateSystems.theta(coord) ≈ acosd(3.0) * u"°"
-	@test UnitfulCoordinateSystems.θ(coord)     ≈ acosd(3.0) * u"°"
-	@test UnitfulCoordinateSystems.ϑ(coord)     ≈ acosd(3.0) * u"°"
+	@test UnitfulCoordinateSystems.theta(coord) ≈ acosd(3.0 / sqrt(10.0)) * u"°"
+	@test UnitfulCoordinateSystems.θ(coord)     ≈ acosd(3.0 / sqrt(10.0)) * u"°"
+	@test UnitfulCoordinateSystems.ϑ(coord)     ≈ acosd(3.0 / sqrt(10.0)) * u"°"
 end
 
 @testset "Component Functions on CoordinateSpherical" begin
