@@ -3,19 +3,18 @@
 This package is a simple and efficient implementation of several common coordinate
 systems, as defined by the ISO 80000-2:2019 standards, with `Unitful` dimensions.
 
-This package is not yet registered in the Julia package manager, but it can be
-added manually via Julia's `Pkg` REPL-mode as follows
+It can be added to a Julia environment using either the `Pkg` REPL-mode via
 
 ```julia
 julia> ]
-(@v1.X) pkg> add https://github.com/mikeingold/UnitfulCoordinateSystems.jl.git
+(@v1.X) pkg> add UnitfulCoordinateSystems
 ```
 
 or programmatically via
 
 ```julia
 import Pkg
-Pkg.add(url="https://github.com/mikeingold/UnitfulCoordinateSystems.jl.git")
+Pkg.add("UnitfulCoordinateSystems")
 ```
 
 ## Coordinate Systems
