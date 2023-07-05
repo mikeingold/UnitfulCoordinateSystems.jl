@@ -1,7 +1,7 @@
 name = "UnitfulCoordinateSystems"
 uuid = "09812cc9-162f-4ef5-b000-81142b1d39ff"
 authors = ["Mike Ingold <mike.ingold@gmail.com>"]
-version = "0.3.3"
+version = "0.3.4"
 
 [deps]
 DimensionfulAngles = "2d4b8d7a-02d9-40f9-9abe-9c695b77de0d"
@@ -10,7 +10,7 @@ StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 
 [compat]
-DimensionfulAngles = "0.1"
+DimensionfulAngles = "0.1, 0.2"
 julia = "1.6"
 StaticArrays = "1"
 Unitful = "1"

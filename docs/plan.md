@@ -9,9 +9,9 @@ Documentation:
 
 Tests:
 - Finish writing tests
-    - For `CoordinateCylindrical` and `CoordinateSpherical`
     - For `SVector` conversions
     - Equality `==` between different coordinate types?
+    - Unit vectors
 - Deploy a GitHub Action for `runtests.jl`
 
 Long Term:
